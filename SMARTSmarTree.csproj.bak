@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FaultTreeAnalysis</RootNamespace>
+    <AssemblyName>SmarTree</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Publish\EAAddin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5B33D821FDBC1B5A51342BB7437B502B89256A62</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FaultTreeAnalysis_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>SRMT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=18.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf">
+      <HintPath>bin\Debug\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>bin\Debug\Aspose.Words.DLL</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Dlls\NLog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavior\Common\MultiSetComparer.cs" />
+    <Compile Include="Behavior\Enum\CloneAction.cs" />
+    <Compile Include="Behavior\Enum\ElementOperate.cs" />
+    <Compile Include="Behavior\Enum\PropertyStatus.cs" />
+    <Compile Include="Behavior\Enum\RetrospectiveInstruction.cs" />
+    <Compile Include="Behavior\Event\BehaveOperationArgs.cs" />
+    <Compile Include="Behavior\Event\ExPropertyChangedEventsArgs.cs" />
+    <Compile Include="Behavior\Event\OperationObjectArgs.cs" />
+    <Compile Include="Behavior\Event\RetrospectiveArgs.cs" />
+    <Compile Include="Behavior\Interface\ICustomClone.cs" />
+    <Compile Include="Behavior\Interface\IRemarkable.cs" />
+    <Compile Include="Behavior\Interface\IRetrospective.cs" />
+    <Compile Include="Behavior\Model\Data\Partial\CutsetModelExtension.cs" />
+    <Compile Include="Behavior\Model\Data\Partial\DrawDataExtension.cs" />
+    <Compile Include="Behavior\Model\Data\Partial\OneCutsetModelExtension.cs" />
+    <Compile Include="Behavior\Model\Data\Partial\SystemModelExtension.cs" />
+    <Compile Include="Behavior\ObjectBehaveEntities.cs" />
+    <Compile Include="Behavior\ObjectBehaveEntity.cs" />
+    <Compile Include="Behavior\ObjectBehaveMeta.cs" />
+    <Compile Include="Behavior\ObjectBehavior.cs" />
+    <Compile Include="Behavior\ObjectExtension.cs" />
+    <Compile Include="Common\ClientVersion.cs" />
+    <Compile Include="Common\ConnectSever.cs" />
+    <Compile Include="Common\c_WaitFormProgress.cs" />
+    <Compile Include="Common\MsgBox.cs" />
+    <Compile Include="Common\RecentFiles.cs" />
+    <Compile Include="Common\RegistrationTrialPeriod.cs" />
+    <Compile Include="Common\SQLiteHelp.cs" />
+    <Compile Include="Common\SyncNode.cs" />
+    <Compile Include="Common\Track.cs" />
+    <Compile Include="Common\Validity.cs" />
+    <Compile Include="Model\Data\CCAFunction.cs" />
+    <Compile Include="Model\Data\CSendMessage.cs" />
+    <Compile Include="Model\Data\CutsetInfo.cs" />
+    <Compile Include="Model\Data\HeaderInfoModel.cs" />
+    <Compile Include="Model\Data\FixedString.cs" />
+    <Compile Include="Model\Data\OneCutsetModel.cs" />
+    <Compile Include="Model\Data\RecentModel.cs" />
+    <Compile Include="Model\Data\RenumberConfig.cs" />
+    <Compile Include="Model\Data\RenumberModel.cs" />
+    <Compile Include="Model\Data\StyleModel.cs" />
+    <Compile Include="Model\Enum\DialogType.cs" />
+    <Compile Include="Model\Enum\Effect.cs" />
+    <Compile Include="Model\Enum\RenumberedType.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\Frm_NetSettings_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\Frm_NetSettings_Select.Designer.cs">
+      <DependentUpon>Frm_NetSettings_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\Frm_NetSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\Frm_NetSettings.Designer.cs">
+      <DependentUpon>Frm_NetSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\ShowCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\ShowCut.Designer.cs">
+      <DependentUpon>ShowCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\ShowFTACal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\ShowFTACal.Designer.cs">
+      <DependentUpon>ShowFTACal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\XtraFormNewGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\XtraFormNewGroup.Designer.cs">
+      <DependentUpon>XtraFormNewGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_WaitForm.Designer.cs">
+      <DependentUpon>Frm_WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageDialogUI\MessageDialog.cs" />
+    <Compile Include="View\MessageDialogUI\MessageDialogWindow_Max.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MessageDialogUI\MessageDialogWindow_Max.designer.cs">
+      <DependentUpon>MessageDialogWindow_Max.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageDialogUI\MessageDialogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MessageDialogUI\MessageDialogWindow.designer.cs">
+      <DependentUpon>MessageDialogWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\AnalysisNew.cs" />
+    <Compile Include="View\Ribbon\AnalysisNewCal.cs" />
+    <Compile Include="View\Ribbon\FtaRibbon.cs" />
+    <Compile Include="View\Ribbon\Analysis.cs" />
+    <Compile Include="Model\Data\CutsetModel.cs" />
+    <Compile Include="Model\Data\ProgramModel.cs" />
+    <Compile Include="Model\Data\ProjectModel.cs" />
+    <Compile Include="Model\Data\StringModel.cs" />
+    <Compile Include="Model\Data\SystemModel.cs" />
+    <Compile Include="Model\Data\HighLightCutSet.cs" />
+    <Compile Include="Model\Data\Xftar.cs" />
+    <Compile Include="Model\Data\CommonFunction.cs" />
+    <Compile Include="Model\Enum\DrawType.cs" />
+    <Compile Include="Model\Data\DrawBase.cs" />
+    <Compile Include="Model\Data\DrawData.cs" />
+    <Compile Include="Model\Data\ProgramerTmpTool.cs" />
+    <Compile Include="Model\Enum\GlobalEvent.cs" />
+    <Compile Include="Model\Enum\SystemMouseEvent.cs" />
+    <Compile Include="View\Diagram\DiagramItemPool.cs" />
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FTAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\FTAControl.Designer.cs">
+      <DependentUpon>FTAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Data\SettingModel.cs" />
+    <Compile Include="View\Diagram\DiagramEvents.cs" />
+    <Compile Include="Model\Enum\ResetType.cs" />
+    <Compile Include="View\Diagram\FtaDiagram.cs" />
+    <Compile Include="View\Diagram\EditPropertyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\EditPropertyView.Designer.cs">
+      <DependentUpon>EditPropertyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\CCA\ExportMclView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\CCA\ExportMclView.Designer.cs">
+      <DependentUpon>ExportMclView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\CCA\ExportIcView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\CCA\ExportIcView.Designer.cs">
+      <DependentUpon>ExportIcView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\QuickRenumberView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\QuickRenumberView.Designer.cs">
+      <DependentUpon>QuickRenumberView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\RibbionEvents.cs" />
+    <Compile Include="View\Ribbon\Start\Edit\FindAndReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Edit\FindAndReplace.Designer.cs">
+      <DependentUpon>FindAndReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\RenumberConflictView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\RenumberConflictView.Designer.cs">
+      <DependentUpon>RenumberConflictView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SelectCheckErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SelectCheckErr.Designer.cs">
+      <DependentUpon>SelectCheckErr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SwitchExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SwitchExport.Designer.cs">
+      <DependentUpon>SwitchExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SwitchImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\SwitchImport.Designer.cs">
+      <DependentUpon>SwitchImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_About.Designer.cs">
+      <DependentUpon>Frm_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_Keymap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_Keymap.Designer.cs">
+      <DependentUpon>Frm_Keymap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_UserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Frm_UserManual.Designer.cs">
+      <DependentUpon>Frm_UserManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\User_StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\User_StartPage.Designer.cs">
+      <DependentUpon>User_StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Table\FtaTable.cs" />
+    <Compile Include="View\Table\TableEvents.cs" />
+    <Compile Include="View\Table\VirtualDrawData.cs" />
+    <Compile Include="View\Project\Project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Setting\Canvas\Ribbon_Setting_Canvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Setting\WindowLayout\Ribbon_Setting_WindowLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Edit\SearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Edit\SearchView.Designer.cs">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\EventModifyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\EventModifyView.Designer.cs">
+      <DependentUpon>EventModifyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\RenumberView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\RenumberView.Designer.cs">
+      <DependentUpon>RenumberView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ribbon\FTA\Ribbon_Tool_FTA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Edit\Ribbon_Start_Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Excel\Ribbon_Start_Excel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\FTAStyle\Ribbon_Start_FTAStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ribbon\Start\Report\Ribbon_Start_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\General.cs" />
+    <Compile Include="Common\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SplashScreen_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SplashScreen_Start.Designer.cs">
+      <DependentUpon>SplashScreen_Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\XtraFormCutsets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XtraFormCutsets.Designer.cs">
+      <DependentUpon>XtraFormCutsets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\XtraFormNewFTAItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XtraFormNewFTAItem.Designer.cs">
+      <DependentUpon>XtraFormNewFTAItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\XtraFormNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XtraFormNewFolder.Designer.cs">
+      <DependentUpon>XtraFormNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\XtraFormNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XtraFormNewProject.Designer.cs">
+      <DependentUpon>XtraFormNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagram\NewRepeatOrTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Diagram\NewRepeatOrTransfer.Designer.cs">
+      <DependentUpon>NewRepeatOrTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\XtraFormNewSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XtraFormNewSystem.Designer.cs">
+      <DependentUpon>XtraFormNewSystem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Diagram\Frm_NetSettings_Select.resx">
+      <DependentUpon>Frm_NetSettings_Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\Frm_NetSettings.resx">
+      <DependentUpon>Frm_NetSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\ShowCut.resx">
+      <DependentUpon>ShowCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\ShowFTACal.resx">
+      <DependentUpon>ShowFTACal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\XtraFormNewGroup.resx">
+      <DependentUpon>XtraFormNewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_WaitForm.resx">
+      <DependentUpon>Frm_WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FTAControl.resx">
+      <DependentUpon>FTAControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\EditPropertyView.resx">
+      <DependentUpon>EditPropertyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MessageDialogUI\MessageDialogWindow_Max.resx">
+      <DependentUpon>MessageDialogWindow_Max.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MessageDialogUI\MessageDialogWindow.resx">
+      <DependentUpon>MessageDialogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\FTA\CCA\ExportMclView.resx">
+      <DependentUpon>ExportMclView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\FTA\CCA\ExportIcView.resx">
+      <DependentUpon>ExportIcView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\FTA\QuickRenumberView.resx">
+      <DependentUpon>QuickRenumberView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Edit\FindAndReplace.resx">
+      <DependentUpon>FindAndReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Edit\SearchView.resx">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Excel\RenumberConflictView.resx">
+      <DependentUpon>RenumberConflictView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Excel\SelectCheckErr.resx">
+      <DependentUpon>SelectCheckErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Excel\SwitchExport.resx">
+      <DependentUpon>SwitchExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Excel\SwitchImport.resx">
+      <DependentUpon>SwitchImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Frm_About.resx">
+      <DependentUpon>Frm_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Frm_Keymap.resx">
+      <DependentUpon>Frm_Keymap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\Frm_UserManual.resx">
+      <DependentUpon>Frm_UserManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\FTA\EventModifyView.resx">
+      <DependentUpon>EventModifyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\FTA\RenumberView.resx">
+      <DependentUpon>RenumberView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ribbon\Start\User_StartPage.resx">
+      <DependentUpon>User_StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SplashScreen_Start.resx">
+      <DependentUpon>SplashScreen_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XtraFormCutsets.resx">
+      <DependentUpon>XtraFormCutsets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XtraFormNewFTAItem.resx">
+      <DependentUpon>XtraFormNewFTAItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XtraFormNewFolder.resx">
+      <DependentUpon>XtraFormNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XtraFormNewProject.resx">
+      <DependentUpon>XtraFormNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Diagram\NewRepeatOrTransfer.resx">
+      <DependentUpon>NewRepeatOrTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XtraFormNewSystem.resx">
+      <DependentUpon>XtraFormNewSystem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FaultTreeStartPage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FaultTreeStartPage_CN.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FaultTreeStartPage_EN.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Temp\xfta-api.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Temp\xfta.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Temp\xftar.cpp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Temp\xftar.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="Example\Example.fta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Repository\Configuration\Data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Repository\Configuration\RecentFile.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Image\pageinfo_32x32.png" />
+    <None Include="Resources\Image\edit_32x32.png" />
+    <None Include="Resources\Image\edit_16x16.png" />
+    <None Include="Resources\Image\documentmap_32x32.png" />
+    <None Include="Resources\Image\documentmap_16x16.png" />
+    <None Include="Resources\Image\documentmapEdit_16x16.png" />
+    <Content Include="Resources\Image\error_16x16.png" />
+    <Content Include="Resources\Image\error_32x32.png" />
+    <Content Include="Resources\Image\group_16x16.png" />
+    <Content Include="Resources\Image\index_32x32.png" />
+    <Content Include="Resources\Image\info_32x32.png" />
+    <Content Include="Resources\Image\opendoc_16x16.png" />
+    <Content Include="Resources\Image\packageproduct_16x16.png" />
+    <Content Include="Resources\Image\projectfile_16x16.png" />
+    <Content Include="Resources\Image\projectfile_32x32.png" />
+    <Content Include="Resources\Image\SRMT.ico" />
+    <Content Include="Resources\Image\system2_16x16.png" />
+    <None Include="Resources\Image\projectfileedit_16x16.png" />
+    <Content Include="Resources\Image\top_32x32.png" />
+    <Content Include="Resources\Image\warning_16x16.png" />
+    <Content Include="Resources\Image\warning_32x32.png" />
+    <Content Include="SRMT.ico" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Common\Apps\App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="FTA.ico" />
+    <Content Include="Resources\Config\NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Dlls\NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Image\Insert_Label.bmp" />
+    <None Include="SmarTree_UserManual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\CalData\Gate1.mcs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\CalData\Gate1.pr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\dprp.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\FEAExcel.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\initConfig.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\LevelRules.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\table.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\TALTemplate.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Temp\templatepath.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\aligncenter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\aligncenter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\alignleft_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\alignleft_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\alignright_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\alignright_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\bold_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\bold_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\calculate_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\calculate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\closeproject_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\closeproject_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\colorpicker_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\colorpicker_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\cut_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\cut_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\diagram_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\diagram_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\export_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\export_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\exporttoxlsx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\find_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\fontsize_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\fontsize_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\import_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\import_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\italic_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\italic_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\lock_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\lock_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\new_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\new_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\open_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\opend_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printpreview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printpreview_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\project_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\project_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\redo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\redo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\report_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\report_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\saveall_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\saveall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\saveas_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\saveas_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\spellcheck_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\spellcheck_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\system_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\system_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\underline_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\underline_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\undo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\undo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\zoomin_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\zoomin_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\zoomout_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\zoomout_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\global_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\global_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\copy_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\copy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printselected_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printselected_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printsetting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printsettting_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printtable_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\printtable_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\paste_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\paste_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\pasterepeatevent_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\pasterepeatevent_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\filter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\filter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\show_32x32.png" />
+    <None Include="Resources\Image\show_16x16.png" />
+    <None Include="Resources\Image\OR_16x16.png" />
+    <None Include="Resources\Image\NOTDONE_EVENT_16x16.png" />
+    <None Include="Resources\Image\TRANSFER_SYMBOL_16x16.png" />
+    <None Include="Resources\Image\OR_NOT_16x16.png" />
+    <None Include="Resources\Image\OR_32x32.png" />
+    <None Include="Resources\Image\NOTDONE_EVENT_32x32.png" />
+    <None Include="Resources\Image\TRANSFER_SYMBOL_32x32.png" />
+    <None Include="Resources\Image\OR_NOT_32x32.png" />
+    <None Include="Resources\Image\OK.png" />
+    <None Include="Resources\Image\NO.png" />
+    <None Include="Resources\Image\OK.ico" />
+    <None Include="Resources\Image\NO.ico" />
+    <None Include="Resources\Image\Splash_ProductDescription.png" />
+    <None Include="Resources\Image\deletenode_16x16.png" />
+    <None Include="Resources\Image\highlight_16x16.png" />
+    <None Include="Resources\Image\transferto_16x16.png" />
+    <None Include="Resources\Image\highlight_32x32.png" />
+    <None Include="Resources\Image\transferto_32x32.png" />
+    <None Include="Resources\Image\deletenode_32x32.png" />
+    <None Include="Resources\Image\emptyfile_32x32.png" />
+    <None Include="Resources\Image\emptyfile_16x16.png" />
+    <None Include="Resources\Image\formicon_32x32.png" />
+    <None Include="Resources\Image\DESCRIPTION_BOX_32x32.png" />
+    <None Include="Resources\Image\DECIDE_32x32.png" />
+    <None Include="Resources\Image\CONDITION_EVENT_32x32.png" />
+    <None Include="Resources\Image\FORBID_32x32.png" />
+    <None Include="Resources\Image\AND_FIRST_32x32.png" />
+    <None Include="Resources\Image\HOUSE_EVENT_32x32.png" />
+    <None Include="Resources\Image\BASIC_EVENT_32x32.png" />
+    <None Include="Resources\Image\AND_32x32.png" />
+    <None Include="Resources\Image\DESCRIPTION_BOX_16x16.png" />
+    <None Include="Resources\Image\DECIDE_16x16.png" />
+    <None Include="Resources\Image\CONDITION_EVENT_16x16.png" />
+    <None Include="Resources\Image\FORBID_16x16.png" />
+    <None Include="Resources\Image\AND_FIRST_16x16.png" />
+    <None Include="Resources\Image\HOUSE_EVENT_16x16.png" />
+    <None Include="Resources\Image\BASIC_EVENT_16x16.png" />
+    <None Include="Resources\Image\AND_16x16.png" />
+    <None Include="Resources\Image\hide_16x16.png" />
+    <None Include="Resources\Image\hide_32x32.png" />
+    <None Include="Resources\Image\title.ico" />
+    <Content Include="Resources\Dlls\Aspose.Cells.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dlls\NLog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dlls\NLog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dlls\xfta.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image\FTA.ico" />
+    <Content Include="Resources\Image\insertnode_16x16.png" />
+    <Content Include="Resources\Image\insertnode_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Temp\ExeclFile\" />
+    <Folder Include="Temp\FEAExcel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

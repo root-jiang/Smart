@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|c:\\users\\admin\\downloads\\faulttreeanalysisv2.1.0\\view\\ftacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:view\\ftacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\common\\importmedinidatas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:common\\importmedinidatas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\model\\data\\drawbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:model\\data\\drawbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\view\\ribbon\\start\\excel\\ribbon_start_excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:view\\ribbon\\start\\excel\\ribbon_start_excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\view\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:view\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\model\\data\\stringmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:model\\data\\stringmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\view\\diagram\\diagramevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:view\\diagram\\diagramevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\view\\diagram\\newlinkgate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7D30BB-E9BD-4945-A2F0-66F40E02DAF8}|SMARTSmarTree.csproj|solutionrelative:view\\diagram\\newlinkgate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3464aa06-e527-4615-b673-e3152f6f02ce}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ecbcd8a0-bdd5-406a-ba08-8d2d57c418a7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrawBase.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Model\\Data\\DrawBase.cs",
+              "RelativeDocumentMoniker": "Model\\Data\\DrawBase.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Model\\Data\\DrawBase.cs",
+              "RelativeToolTip": "Model\\Data\\DrawBase.cs",
+              "ViewState": "AQIAAMQBAAAAAAAAAAAAAMwBAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T14:04:34.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ribbon_Start_Excel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Ribbon\\Start\\Excel\\Ribbon_Start_Excel.cs",
+              "RelativeDocumentMoniker": "View\\Ribbon\\Start\\Excel\\Ribbon_Start_Excel.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Ribbon\\Start\\Excel\\Ribbon_Start_Excel.cs",
+              "RelativeToolTip": "View\\Ribbon\\Start\\Excel\\Ribbon_Start_Excel.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAAAG4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:15:38.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "View\\Project\\Project.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Project\\Project.cs",
+              "RelativeToolTip": "View\\Project\\Project.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAtwHAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T11:37:32.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StringModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Model\\Data\\StringModel.cs",
+              "RelativeDocumentMoniker": "Model\\Data\\StringModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Model\\Data\\StringModel.cs",
+              "RelativeToolTip": "Model\\Data\\StringModel.cs",
+              "ViewState": "AQIAAAEGAAAAAAAAAAAMwBMGAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T11:34:38.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImportMediniDatas.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Common\\ImportMediniDatas.cs",
+              "RelativeDocumentMoniker": "Common\\ImportMediniDatas.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\Common\\ImportMediniDatas.cs",
+              "RelativeToolTip": "Common\\ImportMediniDatas.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAIwPMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T10:26:32.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DiagramEvents.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Diagram\\DiagramEvents.cs",
+              "RelativeDocumentMoniker": "View\\Diagram\\DiagramEvents.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Diagram\\DiagramEvents.cs",
+              "RelativeToolTip": "View\\Diagram\\DiagramEvents.cs",
+              "ViewState": "AQIAAPYBAAAAAAAAAAAawAQCAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T10:22:07.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FTAControl.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\FTAControl.cs",
+              "RelativeDocumentMoniker": "View\\FTAControl.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\FTAControl.cs",
+              "RelativeToolTip": "View\\FTAControl.cs",
+              "ViewState": "AQIAAA4YAAAAAAAAAAASwBkYAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T10:21:37.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NewLinkGate.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Diagram\\NewLinkGate.cs",
+              "RelativeDocumentMoniker": "View\\Diagram\\NewLinkGate.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\FaultTreeAnalysisv2.1.0\\View\\Diagram\\NewLinkGate.cs",
+              "RelativeToolTip": "View\\Diagram\\NewLinkGate.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T10:21:31.349Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

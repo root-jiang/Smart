@@ -1,0 +1,72 @@
+Table1,Device,ProbLoss,ProbError,ATA,LossName,ErrorName,strLoc(默认设备放后，0；设备放前，为1；将设备中-置换为 and ，为2；不需要放置设备和信息，为3)
+,ARS_RA,1.10E-05,1.00E-10,,Loss of data transportation provided by ACS_RA,Undetected erroneous data transportation provided by ACS_RA,
+,ACS_RB,1.10E-05,1.00E-10,,Loss of data transportation provided by ACS_RB,Undetected erroneous data transportation provided by ACS_RB,
+,IDU_RIB,7.50E-05,5.00E-06,,IDURIGHTOUTBOARD fault causes loss of synoptic display,IDURIGHTOUTBOARD fault causes display undetected erroneous synoptic data,
+,IDU_LIB,7.50E-05,5.00E-06,,IDULEFTINBOARD fault causes loss of synoptic display,IDULEFTINBOARD fault causes display undetected erroneous synoptic data,
+,CCR_L,1.00E-07,,42,Loss of cabinet computing resource provided by CCR_L,,3
+,CCR_R,1.00E-07,,42,Loss of cabinet computing resource provided by CCR_R,,3
+Table2,DcDevice,ProbLoss,,,LossName,,
+,L_DC_ESS-DC_ESS_TRAN,1.00E-08,,,Loss of L_DC_ESS and DC_ESS_TRAN,,2
+,R_DC_ESS-DC_ESS_TRAN,1.00E-08,,,Loss of R_DC_ESS and DC_ESS_TRAN,,2
+,L_DC-R_DC,8.00E-08,,,Loss of L_DC and R_DC,,2
+,L_DC_ESS-R_DC_ESS,1.00E-09,,,Loss of L_DC_ESS and R_DC_ESS,,2
+,L_DC-R_DC_ESS,1.00E-08,,,Loss of L_DC and R_DC_ESS,,2
+,L_DC-DC_ESS_TRAN,1.00E-08,,,Loss of L_DC and DC_ESS_TRAN,,2
+,L_DC_ESS-R_DC,1.00E-08,,,Loss of L_DC_ESS and R_DC,,2
+,L_DC_ESS_DC_ESS_TRAN,1.00E-08,,,Loss of L_DC_ESS and DC_ESS_TRAN,,2
+,MAIN_BATT,1.00E-03,,,Loss of MAIN_BATT,,2
+,APU_BATT,1.00E-03,,,Loss of APU_BATT,,2
+Table3,Device,DcDeviceList,,,,,
+,ACS_LA,XXX,,,,,
+,ACS_LB,XXX,,,,,
+,ACS_RA,XXX,,,,,
+,ACS_RB,XXX,,,,,
+,ARS_1A,L_DC_ESS-R_DC_ESS,,,,,
+,ARS_1B,L_DC_ESS-R_DC_ESS,,,,,
+,ARS_2A,L_DC_ESS-R_DC_ESS,,,,,
+,ARS_2B,L_DC_ESS-R_DC_ESS,,,,,
+,ARS_RA,L_DC_ESS-R_DC_ESS,,,,,
+,CCR_L,L_DC_ESS_DC_ESS_TRAN,MAIN_BATT,,,,
+,CCR_R,L_DC-R_DC,APU_BATT,,,,
+,IDU_LOB,L_DC_ESS-DC_ESS_TRAN,,,,,
+,IDU_ROB,L_DC-R_DC,,,,,
+,IDU_C,L_DC-R_DC,,,,,
+,IDU_LIB,R_DC_ESS-DC_ESS_TRAN,,,,,
+,IDU_RIB,L_DC-R_DC,,,,,
+,IDULEFTOUTBOARD,L_DC_ESS-DC_ESS_TRAN,,,,,
+,IDURIGHTOUTBOARD,L_DC-R_DC,,,,,
+,IDUCENTER,L_DC-R_DC,,,,,
+,IDULEFTINBOARD,R_DC_ESS-DC_ESS_TRAN,,,,,
+,IDURIGHTINBOARD,L_DC-R_DC,,,,,
+,GPM_L1,XXX,,,,,
+,GPM_L2,XXX,,,,,
+,GPM_L3,XXX,,,,,
+,GPM_L4,XXX,,,,,
+,GPM_L5,XXX,,,,,
+,GPM_L6,XXX,,,,,
+,GPM_R1,XXX,,,,,
+,GPM_R2,XXX,,,,,
+,GPM_R3,XXX,,,,,
+,GPM_R4,XXX,,,,,
+,GPM_R5,XXX,,,,,
+,GPM_R6,XXX,,,,,
+Table4,DeviceEffect,DeviceFaultList,,,,,
+,ACS_LA,CCR_L,,,,,
+,ACS_LB,CCR_L,,,,,
+,ACS_RA,CCR_R,,,,,
+,ACS_RB,CCR_R,,,,,
+,GPM_L1,CCR_L,,,,,
+,GPM_L2,CCR_L,,,,,
+,GPM_L3,CCR_L,,,,,
+,GPM_L4,CCR_L,,,,,
+,GPM_L5,CCR_L,,,,,
+,GPM_L6,CCR_L,,,,,
+,GPM_R1,CCR_R,,,,,
+,GPM_R2,CCR_R,,,,,
+,GPM_R3,CCR_R,,,,,
+,GPM_R4,CCR_R,,,,,
+,GPM_R5,CCR_R,,,,,
+,GPM_R6,CCR_R,,,,,
+Table5,gateName,information,,,,,
+,strLossGate,strLossInfo,,,,,
+,strUedGate,strUedInfo,,,,,
